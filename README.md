@@ -7,7 +7,7 @@
 2、使用命令行：
 
     a.先配置 config.json 里的参数
-    b.命令行输入 npm run start
+    b.命令行输入 npm start
 
 config 参数
 rootPath --根路径
