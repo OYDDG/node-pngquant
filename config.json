@@ -1,0 +1,4 @@
+{
+	"rootPath": "../../resource/assets/",
+	"exceptDir": ["NewPublic", "Public", "audio"]
+}

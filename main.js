@@ -3,11 +3,12 @@ var fsPromises = require("node:fs/promises");
 var fs = require("fs");
 
 class Main {
-	rootPath = "../../resource/assets/";
-	exceptDir = ["NewPublic", "Public", "audio"];
+	exceptDir = [];
 
 	run() {
-		this.dive(this.rootPath);
+		const config = JSON.parse(fs.readFileSync("./config.json", "utf-8"));
+		if (config.exceptDir) this.exceptDir = config.exceptDir;
+		this.dive(config.rootPath);
 	}
 
 	async dive(path) {
